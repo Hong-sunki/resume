@@ -1,6 +1,6 @@
 // 처음화면
 var i =0;
-var timer = setInterval(add, 20)
+var timer = setInterval(add, 2840)
 
 // function add(){
 //     i++
@@ -22,19 +22,26 @@ var timer = setInterval(add, 20)
 // }
 const introAni = document.querySelector('.introAni')
 const introAniP = document.querySelector('.introAni p')
+// function add(){
+//     i++
+//     if ( i > 100 ) {
+//         clearInterval(timer)
+//         setTimeout(function(){
+//             introAni.classList.add('on')
+//         }, 500)
+//         setTimeout(function(){
+//             introAni.style.display = 'none'
+//         }, 800)
+//         return false
+//     }
+//     introAniP.textContent = i + "%"
+// }
+
 function add(){
-    i++
-    if ( i > 100 ) {
-        clearInterval(timer)
-        setTimeout(function(){
-            introAni.classList.add('on')
-        }, 500)
-        setTimeout(function(){
-            introAni.style.display = 'none'
-        }, 800)
-        return false
-    }
-    introAniP.textContent = i + "%"
+    setTimeout(function(){
+        introAni.style.display = 'none'
+    }, 800)
+    return false
 }
 
 //메뉴
