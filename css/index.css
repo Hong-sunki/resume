@@ -170,10 +170,10 @@ body { background: #f5f9fa; font-family: 'Poppins', sans-serif; }
 
 .introAni { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: #fff; z-index: 99999; }
 .introAni .bar { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.introAni .bar i { font-size: 200px; position: relative; z-index: 999; }
-.introAni .bar p { font-size: 50px; text-align: center; }
-.introAni .bar .barani { background: greenyellow; height: 100px; width: 0%; position: absolute; top: 50px; left: 0; animation: bar 2.7s both; }
-.introAni.on { opacity: 0; transition: all 1s; }
+/* .introAni .bar i { font-size: 200px; position: relative; z-index: 999; }
+.introAni .bar p { font-size: 50px; text-align: center; } */
+/* .introAni .bar .barani { background: greenyellow; height: 100px; width: 0%; position: absolute; top: 50px; left: 0; animation: bar 2.7s both; }
+.introAni.on { opacity: 0; transition: all 1s; } */
 @keyframes htmlani { 0%{ width: 0%; opacity: 0; } 100% { width: 90%; opacity: 1; } }
 @keyframes cssani { 0%{ width: 0%; opacity: 0; } 100% { width: 80%; opacity: 1; } }
 @keyframes scriptani { 0%{ width: 0%; opacity: 0; } 100% { width: 80%; opacity: 1; } }
