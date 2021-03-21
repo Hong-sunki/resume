@@ -55,9 +55,8 @@
             <div class="scene">
                 <div class="cube">
                   <div class="cube__face cube__face--front">
-                    <div class="intro">
-                        <h1>HONG SUN KI</h1>
-                        <p>Front End</p>
+                    <div class="qpqp">
+                        <img src="img/aa1.png" id="logo" alt="Logo" />
                     </div>
                   </div>
                   <div class="cube__face cube__face--back">
@@ -249,6 +248,23 @@
 
 
     <script src="js/index.js"></script>
+    <script src="https://nextparticle.nextco.de/nextparticle.min.js"></script>
+    <script>
+        nextParticle = new NextParticle({
+            image: document.all.logo,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            maxWidth: window.innerWidth * 0.8,
+            particleGap: 2,
+        });
+        window.onresize = function () {
+            if (window.innerWidth > 600) {
+                nextParticle.width = window.innerWidth - 20;
+                nextParticle.height = window.innerHeight - 20;
+                nextParticle.start();
+            }
+        };
+    </script>
     
 </body>
 </html>
