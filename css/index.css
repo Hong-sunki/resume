@@ -65,10 +65,17 @@ body { background: #f5f9fa; font-family: 'Poppins', sans-serif; }
   
   
   
-  .intro { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+  /* .intro { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
   .intro h1 { font-size: 60px; font-weight: bold; color: #222; }
-  .intro p { font-size: 40px; color: #888; margin-top: 10px; }
+  .intro p { font-size: 40px; color: #888; margin-top: 10px; } */
   
+  .qpqp {  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -130px;
+    }
+  #logo { display: none; }
+
   .slide1 .title h2 { font-size: 40px; font-weight: bold; position: relative; }
   .slide1 .title h2::after { position: absolute; opacity: .45; top: 25px; left: 140px; content: ''; height: 30px; width: 50px; background-image: -webkit-repeating-radial-gradient(center center,#04b4e0,#04b4e0 1px,transparent 0px,transparent 100%); -webkit-background-size: 6px 6px; background-size: 6px 6px; z-index: 0;}
   .slide1 .title p { margin-top: 50px; font-size: 16px; color: #999; }
