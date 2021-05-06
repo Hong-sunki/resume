@@ -1,41 +1,10 @@
 // 처음화면
-var i =0;
-var timer = setInterval(add, 2840)
+let i =0;
+let timer = setInterval(add, 2840)
 
-// function add(){
-//     i++
-//     if (i > 100) {
-//        clearInterval(timer)
-//     //    $('.introAni').fadeOut(1000)
-
-//        setTimeout(function(){
-//            $('.introAni').addClass('on')
-//        }, 500)
-//        setTimeout(function(){
-//            $('.introAni').css({display:'none'})
-//        }, 800)
-       
-//        return false
-//     }  
-//     $('.introAni .bar p').text(i + "%")
-//     // $('.introAni .box .barani').css({ width: i +"%" })
-// }
 const introAni = document.querySelector('.introAni')
 const introAniP = document.querySelector('.introAni p')
-// function add(){
-//     i++
-//     if ( i > 100 ) {
-//         clearInterval(timer)
-//         setTimeout(function(){
-//             introAni.classList.add('on')
-//         }, 500)
-//         setTimeout(function(){
-//             introAni.style.display = 'none'
-//         }, 800)
-//         return false
-//     }
-//     introAniP.textContent = i + "%"
-// }
+
 
 function add(){
     setTimeout(function(){
@@ -63,11 +32,6 @@ for ( let i = 0; i < elLabel.length; i++ ) {
     })
 }
 
-// let elImgani = document.querySelector('.imgani')
-// let elImgbox = document.querySelector('.imgbox')
-//     elImgani.addEventListener('click', function(){
-//         elImgbox.classList.add('on')
-//     })
 //sns
 let elSns = document.querySelectorAll('.protxt > a')
 for ( let k = 0; k < elSns.length; k++ ) {
@@ -78,15 +42,8 @@ for ( let k = 0; k < elSns.length; k++ ) {
         this.classList.remove('on')
     })
 } 
-var cube = document.querySelector('.cube');
-//join me
-let elJoin = document.querySelector('.protxt .join')
-elJoin.addEventListener('mouseover', function(){
-    this.classList.add('on')
-})
-elJoin.addEventListener('mouseout', function(){
-    this.classList.remove('on')
-})
+let cube = document.querySelector('.cube');
+
 
 
 
