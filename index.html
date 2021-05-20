@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,30 +11,63 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {  
+            emailjs.init("user_fOjULIRA043kojoaGCtlL"); 
+        })(); 
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+                document.getElementById('contact-form').addEventListener('submit',function (event) {
+                        event.preventDefault();
+                        this.contact_number.value = Math.random() * 100000 |0; 
+                        emailjs.sendForm('service_ebpmww8', 'template_u3wc6i9', this)
+                        .then(
+                        function () {
+                            console.log('SUCCESS!');
+                            location.href = '/resume'
+                            alert('이메일이 전송되었습니다.')
+                        },
+                        function (error) {
+                            console.log('FAILED...', error);
+                        }); 
+                }); 
+        } 
+    </script>
+
+
 </head>
+
 <body>
     <header id="header">
         <p class="radio-group">
             <label class="active">
-              <input type="radio" name="rotate-cube-side" value="front" checked /><i class="fas fa-home"></i><span>HOME</span>
+                <input type="radio" name="rotate-cube-side" value="front" checked /><i
+                    class="fas fa-home"></i><span>HOME</span>
             </label>
             <label>
-              <input type="radio" name="rotate-cube-side" value="right" /><i class="far fa-user"></i><span>AboutMe</span>
+                <input type="radio" name="rotate-cube-side" value="right" /><i
+                    class="far fa-user"></i><span>AboutMe</span>
             </label>
             <label>
-              <input type="radio" name="rotate-cube-side" value="back" class="imgani" /><i class="fas fa-briefcase"></i><span>Portfolio</span>
+                <input type="radio" name="rotate-cube-side" value="back" class="imgani" /><i
+                    class="fas fa-briefcase"></i><span>Portfolio</span>
             </label>
             <label>
-              <input type="radio" name="rotate-cube-side" value="left" /><i class="far fa-chart-bar"></i><span>Skills</span>
+                <input type="radio" name="rotate-cube-side" value="left" /><i
+                    class="far fa-chart-bar"></i><span>Skills</span>
             </label>
             <label>
-              <input type="radio" name="rotate-cube-side" value="top" /><i class="far fa-envelope"></i><span>ContactMe</span>
+                <input type="radio" name="rotate-cube-side" value="top" /><i
+                    class="far fa-envelope"></i><span>ContactMe</span>
             </label>
             <label>
-              <input type="radio" name="rotate-cube-side" value="bottom" />&nbsp;<i class="far fa-edit"></i><span>Grit</span>
+                <input type="radio" name="rotate-cube-side" value="bottom" />&nbsp;<i
+                    class="far fa-edit"></i><span>Grit</span>
             </label>
-          </p>
-          
+        </p>
+
     </header>
     <section id="section">
         <article class="article1">
@@ -46,180 +80,185 @@
                 <a href="#none"><i class="fab fa-facebook-f"></i><span class="blind">페이스북</span></a>
                 <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>
                 <a href="#none"><i class="fas fa-sms"></i><span class="blind">카카오톡</span></a>
-               
+
             </div>
         </article>
         <article class="article2">
             <div class="scene">
                 <div class="cube">
-                  <div class="cube__face cube__face--front">
-                    <div class="qpqp">
-                        <img src="img/aa1.png" id="logo" alt="Logo" />
-                    </div>
-                  </div>
-                  <div class="cube__face cube__face--back">
-                    <div class="slide slide1">
-                        <div class="title">
-                            <h2>Portfolio</h2>
-                            <p>새로움을 통한 혁신적인 변화</p>
-                        </div>
-                        <div class="imgbox">
-                            <ul class="cf">
-                                <li><a href="#none"><img src="./img/blackbg.jpg" alt=""></a></li>
-                                <li><a href="https://hong-sunki.github.io/portfolio2/"><img src="./img/port1.png" alt=""></a></li>
-                                <li><a href="#none"><img src="./img/blackbg.jpg" alt=""></a></li>
-                                <li><a href="index.html"><img src="./img/port4.png" alt=""></a></li>
-                                <li><a href="https://hong-sunki.github.io/festival/"><img src="./img/port5.png" alt=""></a></li>
-                                <li><a href="https://hong-sunki.github.io/renewal/"><img src="./img/port3.png" alt=""></a></li>
-                                <li><a href="#none"><img src="./img/blackbg.jpg" alt=""></a></li>
-                                <li><a href="https://hong-sunki.github.io/youtube/"><img src="./img/port2.png" alt=""></a></li>
-                                <li><a href="#none"><img src="./img/blackbg.jpg" alt=""></a></li>
-                            </ul>
+                    <div class="cube__face cube__face--front">
+                        <div class="qpqp">
+                            <img src="img/aa1.png" id="logo" alt="Logo" />
                         </div>
                     </div>
-                    
-                    
-                  </div>
-                  <div class="cube__face cube__face--right">
-                    <div class="slide slide2">
-                        <div class="into">
+                    <div class="cube__face cube__face--back">
+                        <div class="slide slide1">
                             <div class="title">
-                                <h2>About <span>Me</span></h2>
+                                <h2>Portfolio</h2>
+                                <p>새로움을 통한 혁신적인 변화</p>
                             </div>
-                            <div class="introduce cf">
-                                <div class="introduce1">
-                                    <p> 항상 배우려는 자세와 도전하는 자세로 배우고<br>
-                                       고민하고 새로움을 도전하는 <span>"Front End 홍선기"</span> 입니다
-                                    </p>
+                            <div class="imgbox">
+                                <ul class="cf">
+                                    <li><a href="https://hong-sunki.github.io/portfolio2/" target="_blank"><img
+                                                src="./img/port1.png" alt=""></a></li>
+                                    <li><a href="#none"><img src="./img/whitebg.png" alt=""></a></li>
+                                    <li><a href="index.html" target="_blank"><img src="./img/port4.png" alt=""></a></li>
+                                    <li><a href="#none"><img src="./img/whitebg.png" alt=""></a></li>
+                                    <li><a href="https://hong-sunki.github.io/festival/" target="_blank"><img
+                                                src="./img/port5.png" alt=""></a></li>
+                                    <li><a href="#none"><img src="./img/whitebg.png" alt=""></a></li>
+                                    <li><a href="https://hong-sunki.github.io/renewal/" target="_blank"><img
+                                                src="./img/port3.png" alt=""></a></li>
+                                    <li><a href="#none"><img src="./img/whitebg.png" alt=""></a></li>
+                                    <li><a href="https://hong-sunki.github.io/youtube/" target="_blank"><img
+                                                src="./img/port2.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cube__face cube__face--right">
+                        <div class="slide slide2">
+                            <div class="into">
+                                <div class="title">
+                                    <h2>About <span>Me</span></h2>
                                 </div>
-                                <div class="introduce2">
-                                    <p><span>Age</span>&nbsp;&nbsp; 29</p>
-                                    <p><span>Address</span>&nbsp;&nbsp; 서울 관악구 신림동</p>
-                                    <p><span>E-mail</span>&nbsp;&nbsp; tjsrl434@naver.com</p>
-                                    <p><span>Phone</span>&nbsp;&nbsp; 010-5363-9948</p>
+                                <div class="introduce cf">
+                                    <div class="introduce1">
+                                        <p> 항상 배우려는 자세와 도전하는 자세로 배우고<br>
+                                            고민하고 새로움을 도전하는 <span>"Front End 홍선기"</span> 입니다
+                                        </p>
+                                    </div>
+                                    <div class="introduce2">
+                                        <p><span>Age</span>&nbsp;&nbsp; 29</p>
+                                        <p><span>Address</span>&nbsp;&nbsp; 서울 관악구 신림동</p>
+                                        <p><span>E-mail</span>&nbsp;&nbsp; tjsrl434@naver.com</p>
+                                        <p><span>Phone</span>&nbsp;&nbsp; 010-5363-9948</p>
+                                    </div>
+                                </div>
+                                <div class="intotxt">
+                                    <h3><i class="far fa-id-badge"></i> LICENSE</h3>
+                                    <p><span>2021.4</span> 웹디자인 기능사 </p>
+                                </div>
+                                <div class="intotxt">
+                                    <h3><i class="far fa-edit"></i> EDUCATION</h3>
+                                    <p><span>2020.12 ~ 2021.5</span> 그린컴퓨터학원 &amp; 프론트엔드개발자 양성과정</p>
                                 </div>
                             </div>
-                            <div class="intotxt">
-                                <h3><i class="far fa-id-badge"></i> LICENSE</h3>
-                                <p><span>2021.4</span> 웹디자인 기능사 </p>
+                        </div>
+
+                    </div>
+                    <div class="cube__face cube__face--left">
+                        <div class="slide slide3">
+                            <div class="title">
+                                <h2>Skills</h2>
                             </div>
-                            <div class="intotxt">
-                                <h3><i class="far fa-edit"></i> EDUCATION</h3>
-                                <p><span>2020.12 ~ 2021.5</span> 그린컴퓨터학원  &amp; 프론트엔드개발자 양성과정</p>
+                            <div class="skillContainer">
+                                <div class="skill html">
+                                    <p>HTML5</p>
+                                    <div class="score">
+                                        <div class="myscore"><span>90%</span></div>
+                                    </div>
+                                </div>
+                                <div class="skill css">
+                                    <p>CSS3</p>
+                                    <div class="score">
+                                        <div class="myscore"><span>80%</span></div>
+                                    </div>
+                                </div>
+                                <div class="skill script">
+                                    <p>JavaScript</p>
+                                    <div class="score">
+                                        <div class="myscore"><span>80%</span></div>
+                                    </div>
+                                </div>
+                                <div class="skill jquery">
+                                    <p>JQuery</p>
+                                    <div class="score">
+                                        <div class="myscore"><span>70%</span></div>
+                                    </div>
+                                </div>
+                                <div class="skill react">
+                                    <p>React</p>
+                                    <div class="score">
+                                        <div class="myscore"><span>70%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cube__face cube__face--top">
+                        <div class="slide slide4 cf">
+                            <div class="title">
+                                <h2>Contact <span>Me</span></h2>
+                            </div>
+                            <div class="contleft">
+                                <div>
+                                    <a href="#none">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <p>서울특별시 관악구</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="tel:010-5363-9948">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <p>010-5363-9948</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="mailto:tjsrl434@naver.com">
+                                        <i class="far fa-envelope"></i>
+                                        <p>tjsrl434@naver.com</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#none">
+                                        <i class="fas fa-sms"></i>
+                                        <p>tjsrl434</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contright">
+                                <form id="contact-form" action="#none" method="post" class="form1">
+                                    <fieldset>
+                                        <legend>기본정보</legend>
+                                        <input type="hidden" name="contact_number">
+                                        <p>
+                                            <label for="name"><span class="blind">Name</span></label>
+                                            <input type="text" id="name" placeholder="Name" name="to_name">
+                                        </p>
+                                        <p>
+                                            <label for="hp"><span class="blind">Phone</span></label>
+                                            <input type="text" id="hp" placeholder="Phone Number" name="tel">
+                                        </p>
+                                        <p>
+                                            <label for="email1"><span class="blind">E-mail</span></label>
+                                            <input type="text" id="email1" placeholder="E-Mail" name="email">
+                                        </p>
+                                        <p>
+                                            <label for="memo"><span class="blind">Memo</span></label>
+                                            <textarea id="memo" placeholder="MESSAGE" name="message"></textarea>
+                                        </p>
+                                        <p>
+                                            <button type="submit" value="Send">SEND MESSAGE</button>
+                                        </p>
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    
-                  </div>
-                  <div class="cube__face cube__face--left">
-                    <div class="slide slide3">
-                        <div class="title">
-                            <h2>Skills</h2>
-                        </div>
-                        <div class="skillContainer">
-                            <div class="skill html">
-                                <p>HTML5</p>
-                                <div class="score">
-                                    <div class="myscore"><span>90%</span></div>
-                                </div>
-                            </div>
-                            <div class="skill css">
-                                <p>CSS3</p>
-                                <div class="score">
-                                    <div class="myscore"><span>80%</span></div>
-                                </div>
-                            </div>
-                            <div class="skill script">
-                                <p>JavaScript</p>
-                                <div class="score">
-                                    <div class="myscore"><span>80%</span></div>
-                                </div>
-                            </div>
-                            <div class="skill jquery">
-                                <p>JQuery</p>
-                                <div class="score">
-                                    <div class="myscore"><span>70%</span></div>
-                                </div>
-                            </div>
-                            <div class="skill react">
-                                <p>React</p>
-                                <div class="score">
-                                    <div class="myscore"><span>60%</span></div>
-                                </div>
-                            </div>
+                    <div class="cube__face cube__face--bottom">
+                        <div class="endingbox">
+                            <p>계속되는 도전으로 새로움을 발견하고 싶습니다</p>
+                            <p>지치지않고 포기하지않고 계속 전진하고 싶습니다</p>
+                            <p>모든 배움과 경험은 즐거움의 연속입니다</p>
+                            <p>Nothing is Impossible</p>
                         </div>
                     </div>
-                    
-                  </div>
-                  <div class="cube__face cube__face--top">
-                    <div class="slide slide4 cf">
-                        <div class="title">
-                            <h2>Contact <span>Me</span></h2>
-                        </div>
-                        <div class="contleft">
-                            <div>
-                                <a href="#none">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <p>서울특별시 관악구</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="tel:010-5363-9948">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <p>010-5363-9948</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="mailto:tjsrl434@naver.com">
-                                    <i class="far fa-envelope"></i>
-                                    <p>tjsrl434@naver.com</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#none">
-                                    <i class="fas fa-sms"></i>
-                                    <p>tjsrl434</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contright">
-                            <form action="#none" method="post" class="form1">
-                                <fieldset>
-                                    <legend>기본정보</legend>
-                                    <p>
-                                        <label for="name"><span class="blind">Name</span></label>
-                                        <input type="text" id="name" placeholder="Name">
-                                    </p>
-                                    <p>
-                                        <label for="hp"><span class="blind">Phone</span></label>
-                                        <input type="text" id="hp" placeholder="Phone Number">
-                                    </p>
-                                    <p>
-                                        <label for="email1"><span class="blind">E-mail</span></label>
-                                        <input type="text" id="email1" placeholder="E-Mail">
-                                    </p>
-                                    <p>
-                                        <label for="memo"><span class="blind">Memo</span></label>
-                                        <textarea id="memo" placeholder="MESSAGE"></textarea>
-                                    </p>
-                                    <p>
-                                        <button type="submit">SEND MESSAGE</button>
-                                    </p>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="cube__face cube__face--bottom">
-                      <div class="endingbox">
-                          <p>계속되는 도전으로 새로움을 발견하고 싶습니다</p>
-                          <p>지치지않고 포기하지않고 계속 전진하고 싶습니다</p>
-                          <p>모든 배움과 경험은 즐거움의 연속입니다</p>
-                          <p>Nothing is Impossible</p>
-                      </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </article>
     </section>
 
@@ -248,6 +287,7 @@
             }
         };
     </script>
-    
+
 </body>
+
 </html>
